@@ -36,7 +36,7 @@ C:\Users\Tony_\Desktop\MVC1\MVC1\bin\Microsoft.AI.DependencyCollector.xml
 C:\Users\Tony_\Desktop\MVC1\MVC1\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\Tony_\Desktop\MVC1\MVC1\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Tony_\Desktop\MVC1\MVC1\bin\Microsoft.AI.Web.xml
-C:\Users\Tony_\Desktop\MVC1\MVC1\obj\Debug\MVC1.csprojResolveAssemblyReference.cache
 C:\Users\Tony_\Desktop\MVC1\MVC1\obj\Debug\MVC1.csproj.CoreCompileInputs.cache
 C:\Users\Tony_\Desktop\MVC1\MVC1\obj\Debug\MVC1.dll
 C:\Users\Tony_\Desktop\MVC1\MVC1\obj\Debug\MVC1.pdb
+C:\Users\Tony_\Desktop\MVC1\MVC1\obj\Debug\MVC1.csprojResolveAssemblyReference.cache

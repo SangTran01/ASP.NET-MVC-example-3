@@ -17,6 +17,8 @@ namespace MVC1.Controllers
             return View();
         }
 
-
+        public string Hello(string name) {
+            return $"My name is {name}";
+        }
     }
 }
