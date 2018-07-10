@@ -150,6 +150,8 @@
     </Compile>
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\ErrorViewModel.cs" />
+    <Compile Include="Models\Owner.cs" />
+    <Compile Include="Models\VMCar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

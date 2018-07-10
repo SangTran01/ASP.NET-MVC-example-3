@@ -10,11 +10,19 @@ namespace MVC1.Controllers
     public class CarController : Controller
     {
         private static List<Car> cars = new List<Car>
-            {
-                new Car { ID = 1, Make = "Ford", Model = "Mustang", Year = 2015, Email = "mustang@ford.com" },
-                new Car { ID = 2, Make = "Chevrolet", Model = "Corvette", Year = 2016, Email = "corvette@gm.com" },
-                new Car { ID = 3, Make = "Tesla", Model = "Roadster", Year = 2017, Email = "roadster@tesla.com" }
-            };
+        {
+            new Car { ID = 1, Make = "Ford", Model = "Mustang", Year = 2015, Email = "mustang@ford.com" },
+            new Car { ID = 2, Make = "Chevrolet", Model = "Corvette", Year = 2016, Email = "corvette@gm.com" },
+            new Car { ID = 3, Make = "Tesla", Model = "Roadster", Year = 2017, Email = "roadster@tesla.com" }
+        };
+
+        private static List<Owner> owners = new List<Owner>
+        {
+            new Owner { ID = 1, FirstName = "Bill", LastName = "Ford"},
+            new Owner { ID = 2, FirstName = "Mary", LastName = "Barra"},
+            new Owner { ID = 3, FirstName = "Elon", LastName = "Musk"}
+        };
+
         // GET: Car
         public ActionResult Index()
         {
@@ -24,12 +32,18 @@ namespace MVC1.Controllers
         // GET: Car/Details/5
         public ActionResult Details(int id)
         {
-            var car = cars.Find(c => c.ID == id);
+            int index = cars.FindIndex(c => c.ID == id);
 
-            if (car == null) {
+            if (index == -1)
+            {
                 return View("Error", new ErrorViewModel { Description = $"Car with ID {id} not found." });
             }
-            return View(car);
+
+            Owner owner = owners[index];
+            Car car = cars[index];
+            VMCar vmCar = new VMCar { ID = car.ID, Make = car.Make, Model = car.Model, Year = car.Year, Email = car.Email };
+            vmCar.OwnerName = $"{owner.FirstName} {owner.LastName}";
+            return View(vmCar);
         }
 
         // GET: Car/Create

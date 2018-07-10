@@ -1,4 +1,4 @@
-﻿@model MVC1.Models.Car
+﻿@model MVC1.Models.VMCar
 
 @{
     ViewBag.Title = "Details";
@@ -40,6 +40,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OwnerName)
         </dd>
 
     </dl>
